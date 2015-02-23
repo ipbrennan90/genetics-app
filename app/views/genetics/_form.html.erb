@@ -1,0 +1,23 @@
+<%= form_for @genetic do |f| %>
+
+<% if @genetic.errors.any? %>
+<h2> Errors </h2>
+<%= @genetic.errors.full_messages.each do |message| %>
+<ul>
+  <li> <%= message %> </li>
+  <% end %>
+</ul>
+<% end %>
+
+<%= f.label :strain %>
+<%= f.text_field :strain %>
+
+<%= f.label :native_location %>
+<%= f.text_field :native_location %>
+
+<%= f.label :thc_content %>
+<%= f.number_field :thc_content %>
+
+<%= f.submit %> | <%= link_to "Cancel", genetics_path %>
+
+<% end %>

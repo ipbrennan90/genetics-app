@@ -1,0 +1,7 @@
+<h1> <%= @genetic.strain %></h1>
+</br>
+<%= @genetic.native_location %>
+</br>
+<%= @genetic.thc_content %>
+</br>
+<%= link_to "Edit", edit_genetic_path(g) %> | <%= link_to "Delete", genetic_path(g), method: :delete, data: {confirm: "Are you sure?"} %>

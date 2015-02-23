@@ -1,0 +1,14 @@
+<h1>All your genetics</h1>
+<h2> <%= link_to "New Genetic", new_genetic_path %></h2>
+</br>
+<%= @genetics.each do |g| %>
+</br>
+<%= g.strain %>
+</br>
+<%= g.native_location %>
+</br>
+<%= g.thc_content %>
+</br>
+<%= link_to "Edit", edit_genetic_path(g) %> | <%= link_to "Delete", genetic_path(g), method: :delete, data: {confirm: "Are you sure?"} %>
+</br>
+<% end %>
