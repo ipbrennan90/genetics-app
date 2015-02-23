@@ -2,8 +2,9 @@
 
 <% if @genetic.errors.any? %>
 <h2> Errors </h2>
-<%= @genetic.errors.full_messages.each do |message| %>
 <ul>
+<%@genetic.errors.full_messages.each do |message| %>
+
   <li> <%= message %> </li>
   <% end %>
 </ul>

@@ -4,4 +4,4 @@
 </br>
 <%= @genetic.thc_content %>
 </br>
-<%= link_to "Edit", edit_genetic_path(g) %> | <%= link_to "Delete", genetic_path(g), method: :delete, data: {confirm: "Are you sure?"} %>
+<%= link_to "Edit", edit_genetic_path(@genetic) %> | <%= link_to "Delete", genetic_path(@genetic), method: :delete, data: {confirm: "Are you sure?"} %>
