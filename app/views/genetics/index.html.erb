@@ -1,14 +1,26 @@
 <h1>All your genetics</h1>
 <h2> <%= link_to "New Genetic", new_genetic_path %></h2>
 </br>
-<%= @genetics.each do |g| %>
-</br>
-<%= g.strain %>
-</br>
-<%= g.native_location %>
-</br>
-<%= g.thc_content %>
-</br>
-<%= link_to "Edit", edit_genetic_path(g) %> | <%= link_to "Delete", genetic_path(g), method: :delete, data: {confirm: "Are you sure?"} %>
-</br>
-<% end %>
+<table>
+  <tr>
+    <th>Strain</th>
+    <th>Native Location</th>
+    <th>THC content</th>
+  </tr>
+
+  <tbody>
+    <% @genetics.each do |g| %>
+
+
+    <tr>
+      <td><%= g.strain %></td>
+
+      <td><%= g.native_location %></td>
+
+      <td><%= g.thc_content %></td>
+
+      <td><button type = "button"><%= link_to "Edit", edit_genetic_path(g) %></button> | <button type = "button"><%= link_to "Delete", genetic_path(g), method: :delete, data: {confirm: "Are you sure?"} %></button></td>
+    </tr>
+  </tbody>
+  <% end %>
+</table>
