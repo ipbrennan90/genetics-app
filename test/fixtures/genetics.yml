@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  strain: MyString
+  native_location: MyString
+  thc_content: 1
+
+two:
+  strain: MyString
+  native_location: MyString
+  thc_content: 1
